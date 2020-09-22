@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sabtu, 29 Agustus 2020" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@id/view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/view"
+        app:layout_constraintRight_toLeftOf="@id/tvStatus"
+        app:layout_constraintTop_toTopOf="@id/view"
+        tools:text="MultiDrop" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        tools:text="MultiDrop" />
+
+    <ImageView
+        android:id="@+id/ivImageOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_lock_idle_alarm"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAlamatAwal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivImageOne"
+        app:layout_constraintLeft_toRightOf="@id/ivImageOne"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivImageOne"
+        tools:text="MultiDrop" />
+
+    <ImageView
+        android:id="@+id/ivImageTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@android:drawable/ic_lock_idle_alarm"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/ivImageOne" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAlamatAkhir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivImageTwo"
+        app:layout_constraintLeft_toRightOf="@id/ivImageTwo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivImageTwo"
+        tools:text="MultiDrop" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/warm_grey"
+        app:layout_constraintLeft_toRightOf="@id/view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImageTwo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
